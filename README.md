@@ -122,8 +122,7 @@ Example table structure:
 
 Example output from the console application:
 
-![Console Example](images/console.png)
-
+![Console Example](./images/console.png)
 ---
 
 ## Installation
