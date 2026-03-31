@@ -85,12 +85,13 @@ src
 
 Description of important folders:
 
-* **app** → Entry point of the application
-* **dao** → Data Access Objects for database operations
-* **service** → Business logic layer
-* **model** → Data models and domain classes
-* **util** → Utility classes such as database connection
+- **app** → Contains the main entry point of the application (TestApp.java), where the program starts and the console interaction is handled.
 
+- **dao** → Contains the Data Access Objects responsible for database operations such as retrieving, inserting, updating, and deleting data using JDBC.
+
+- **model** → Contains the domain classes representing the core entities of the system such as employees, employers, shift leaders, shift plans, and status definitions.
+
+- **util** → Contains utility classes such as the database connection class used to establish and manage the connection to the MySQL database.
 ---
 
 ## Database
