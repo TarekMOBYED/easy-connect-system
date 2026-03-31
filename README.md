@@ -1,135 +1,242 @@
 # Easy Connect System
 
-Easy Connect is a simple enterprise-style Java application for managing employees and internal communication within a company.  
-The system demonstrates the use of **Java, JDBC, MySQL, and the DAO design pattern** in a layered architecture.
+## Overview
 
-This project was developed as a learning project to practice backend development and database integration.
+**Easy Connect System** is a simple Java-based console application designed to manage employees and internal communication within a company.
 
----
+The project was developed as a learning exercise to practice **backend development concepts**, including database connectivity, layered architecture, and the DAO design pattern.
 
-# Features
+The system allows administrators to manage employees, send internal messages, and register vacations while storing data in a **MySQL database**.
 
-- User authentication (Admin / Mitarbeiter)
-- Employee management
-- Send internal messages
-- Vacation registration
-- Soft delete for employees
-- Database persistence using MySQL
-- Layered architecture using DAO pattern
+This project demonstrates fundamental **Java enterprise development principles** such as structured architecture, database integration using JDBC, and clean code organization.
 
 ---
 
-## Console Example
+## Features
+
+The system currently supports the following functionalities:
+
+* User authentication (Admin / Employee)
+* Employee management
+* Add new employees
+* View all employees
+* Register employee vacations
+* Send internal messages
+* Soft delete for employees
+* Persistent storage using MySQL database
+* Structured backend architecture using DAO pattern
+
+---
+
+## Technologies Used
+
+The project is implemented using the following technologies:
+
+* **Java**
+* **JDBC**
+* **MySQL**
+* **DAO Design Pattern**
+* **Layered Architecture**
+* **Eclipse IDE**
+* **Git & GitHub**
+
+---
+
+## System Architecture
+
+The project follows a simplified **layered architecture**, separating application logic from data access.
+
+```
+Application Layer
+       ↓
+Service Layer
+       ↓
+DAO Layer
+       ↓
+Database
+```
+
+This structure improves maintainability and reflects common backend architecture used in real-world enterprise applications.
+
+---
+
+## Project Structure
+
+```
+src
+├── app
+│   └── TestApp.java
+│
+├── dao
+│   ├── DAO.java
+│   ├── MitarbeiterDAO.java
+│   └── MitarbeiterDAOImpl.java
+│
+├── service
+│   └── MitarbeiterService.java
+│
+├── model
+│   ├── Mitarbeiter.java
+│   ├── Schichtleiter.java
+│   └── Schichtplan.java
+│
+└── util
+    └── Database.java
+```
+
+Description of important folders:
+
+* **app** → Entry point of the application
+* **dao** → Data Access Objects for database operations
+* **service** → Business logic layer
+* **model** → Data models and domain classes
+* **util** → Utility classes such as database connection
+
+---
+
+## Database
+
+The system uses a MySQL database.
+
+Database name:
+
+```
+easy_connect
+```
+
+Example table structure:
+
+### Table: mitarbeiter
+
+| Field                | Type    |
+| -------------------- | ------- |
+| id                   | INT     |
+| name                 | VARCHAR |
+| zustand              | VARCHAR |
+| beschaeftigtBeiFirma | VARCHAR |
+| message              | TEXT    |
+
+---
+
+## Application Screenshot
+
+Example output from the console application:
 
 ![Console Example](images/console.png)
 
 ---
 
-# Technologies Used
+## Installation
 
-- Java
-- JDBC
-- MySQL
-- Eclipse IDE
-- DAO Design Pattern
+### 1. Clone the repository
 
----
-The project follows a simple layered architecture using the DAO pattern.
-Project Structure
+```
+git clone https://github.com/TarekMOBYED/easy-connect-system.git
+```
 
-src
-├── app
-│   └── TestApp.java          # Application entry point
-│
-├── dao                       # Data Access Layer
-│   ├── DAO.java
-│   ├── MitarbeiterDAO.java
-│   └── MitarbeiterDAOImpl.java
-│
-├── model                     # Domain Models
-│   ├── Mitarbeiter.java
-│   ├── Schichtleiter.java
-│   └── Schichtplan.java
-│
-└── util                      # Utility classes
-    └── Database.java         # JDBC connection handling
+### 2. Open the project in Eclipse
 
----
+Import the project as a **Java Project**.
 
-##How to Run
+### 3. Configure the database
 
-1. Create MySQL database easy_connect
-2. Run TestApp.java
-3. Login with demo user
-   
----
+Create the database in MySQL:
 
-# Database Setup
+```
+CREATE DATABASE easy_connect;
+```
 
-Run the SQL script located in:
-database/schema.sql
+Create the required tables.
 
-This will create the database:
+### 4. Configure database connection
 
-easy_connect
+Update the connection parameters in:
 
-and the following tables:
+```
+util/Database.java
+```
 
-- mitarbeiter
-- users
+Example:
+
+```
+jdbc:mysql://localhost:3306/easy_connect
+```
 
 ---
 
-# Example Login
+## Running the Application
 
-Admin account:
-username: tarek
-password: 1234
+Run the main class:
 
-Regular user:
-username: user1
-password: pass
+```
+TestApp.java
+```
 
----
-
-# Example Console Interface
-=== Willkommen zum Easy Connect System ===
-
-1- Neuen Mitarbeiter anlegen
-2- Urlaub anmelden
-3- Nachricht senden
-4- Mitarbeiter anzeigen
-5- Mitarbeiter entfernen
-6- Beenden
+The application will start in the console and display the available menu options.
 
 ---
 
-# Learning Goals
+## Example Usage
 
-This project demonstrates:
+Example login:
 
-- Java database connectivity (JDBC)
-- DAO pattern implementation
-- Console-based enterprise system
-- MySQL database design
-- Basic role-based access control
+```
+Username: admin
+Password: admin
+```
+
+Example console output:
+
+```
+1 - Add Employee
+2 - Show Employees
+3 - Register Vacation
+4 - Send Message
+5 - Exit
+```
 
 ---
 
-# Author
+## Learning Goals
 
-Tarek Mobayed  
-Medical Informatics Student  
-FH Dortmund
+This project was created to practice and understand:
+
+* Object-Oriented Programming in Java
+* JDBC database connectivity
+* DAO design pattern
+* Layered software architecture
+* Basic enterprise backend structure
+* Working with Git and GitHub
+* Designing maintainable Java applications
 
 ---
 
-# Future Improvements
+## Future Improvements
 
-Possible improvements for this project:
+Possible future improvements include:
 
-- GUI using JavaFX
-- REST API with Spring Boot
-- Password encryption
-- Logging system
-- Web interface
+* Convert the application to a **Spring Boot REST API**
+* Implement a **web interface**
+* Add **authentication and authorization**
+* Improve logging and exception handling
+* Implement **unit tests using JUnit**
+* Dockerize the application
+* Add REST endpoints for external systems
+
+---
+
+## Author
+
+**Tarek Mobayed**
+
+Student of Medical Informatics
+FH Dortmund – Germany
+
+GitHub:
+https://github.com/TarekMOBYED
+
+---
+
+## License
+
+This project is intended for **educational purposes** and learning backend development concepts.
