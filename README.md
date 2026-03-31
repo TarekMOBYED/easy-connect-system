@@ -72,13 +72,12 @@ src
 │   ├── MitarbeiterDAO.java
 │   └── MitarbeiterDAOImpl.java
 │
-├── service
-│   └── MitarbeiterService.java
-│
 ├── model
+│   ├── Arbeitgeber.java
 │   ├── Mitarbeiter.java
 │   ├── Schichtleiter.java
-│   └── Schichtplan.java
+│   ├── Schichtplan.java
+│   └── zustand.java
 │
 └── util
     └── Database.java
