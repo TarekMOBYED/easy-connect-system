@@ -188,11 +188,19 @@ Password: admin
 Example console output:
 
 ```
-1 - Add Employee
-2 - Show Employees
-3 - Register Vacation
-4 - Send Message
-5 - Exit
+=== Willkommen zum Easy Connect System ===
+Benutzername: tarek
+Passwort: 1234
+Login erfolgreich! Rolle: Admin
+
+------------------------------------------------------------
+Angemeldet als: Admin
+1. Neuen Mitarbeiter anlegen (nur Admin)
+2. Urlaub anmelden
+3. Nachricht senden
+4. Mitarbeiter anzeigen
+5. Mitarbeiter entfernen (nur Admin)
+6. Beenden
 ```
 
 ---
