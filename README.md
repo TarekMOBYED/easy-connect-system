@@ -18,6 +18,8 @@ This project was developed as a learning project to practice backend development
 - Layered architecture using DAO pattern
 
 ---
+## Console Example
+
 
 # Technologies Used
 
@@ -28,25 +30,34 @@ This project was developed as a learning project to practice backend development
 - DAO Design Pattern
 
 ---
+The project follows a simple layered architecture using the DAO pattern.
+Project Structure
 
-# Project Structure
 src
 ├── app
-│ └── TestApp.java
+│   └── TestApp.java          # Application entry point
 │
-├── dao
-│ ├── DAO.java
-│ ├── MitarbeiterDAO.java
-│ └── MitarbeiterDAOImpl.java
+├── dao                       # Data Access Layer
+│   ├── DAO.java
+│   ├── MitarbeiterDAO.java
+│   └── MitarbeiterDAOImpl.java
 │
-├── model
-│ ├── Mitarbeiter.java
-│ ├── Schichtleiter.java
-│ ├── Schichtplan.java
+├── model                     # Domain Models
+│   ├── Mitarbeiter.java
+│   ├── Schichtleiter.java
+│   └── Schichtplan.java
 │
-└── util
-└── Database.java
+└── util                      # Utility classes
+    └── Database.java         # JDBC connection handling
 
+---
+
+#How to Run
+
+1. Create MySQL database easy_connect
+2. Run TestApp.java
+3. Login with demo user
+   
 ---
 
 # Database Setup
