@@ -18,8 +18,12 @@ This project was developed as a learning project to practice backend development
 - Layered architecture using DAO pattern
 
 ---
+
 ## Console Example
 
+![Console Example](images/console.png)
+
+---
 
 # Technologies Used
 
