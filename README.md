@@ -122,7 +122,7 @@ Example table structure:
 
 Example output from the console application:
 
-![Console Example](./images/Console.png)
+![Console Example](images/console.png)
 
 ---
 
