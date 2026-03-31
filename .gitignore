@@ -1,0 +1,26 @@
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Java
+*.class
+bin/
+out/
+target/
+
+# macOS
+.DS_Store
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Serialized files
+*.ser
